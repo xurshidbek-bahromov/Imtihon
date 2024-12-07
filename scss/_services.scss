@@ -1,0 +1,64 @@
+.services-main{
+    margin: 20px 0;
+    padding: 20px 0;
+    .services{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+        .service{
+            flex: 1;
+            text-align: start;
+            padding: 20px 60px;
+            h2{
+                font-family: "Exo 2", sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                color: #363738;
+            }
+            p{
+                font-size: 16px; 
+                font-weight: 400;
+            }
+        }
+        .service:not(:last-child) {
+            border-right: 2px solid #e9ecef;
+        }
+    }
+}
+
+@media (max-width: 1024px){
+    .services-main{
+        .services{
+            grid-template-columns: auto;
+            gap: 20px;
+            box-shadow: none;
+            .service{
+                padding: 20px;
+                box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px){
+    .services-main{
+        .services{
+            box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+            .service{
+                padding-left: none;
+                box-shadow: none;
+                display: block;
+            }
+            .service:not(:last-child){
+                border-right: none;
+            }
+        }
+    }
+}

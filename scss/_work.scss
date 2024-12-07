@@ -1,0 +1,93 @@
+.work{
+    margin: 20px 0;
+    .work-content{
+        h3{
+            font-family: "Exo 2", sans-serif;
+            font-size: 48px;
+            font-weight: 600;
+            color: #363738;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .work-boxs{
+            margin: 20px 0;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 20px;
+            .work-box{
+                box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+                margin-top: 30px;
+                transition: all 0.4s ease;
+                border-radius: 10px;
+                width: 100%;
+                .work-img{
+                    width: 100%;
+                    height: auto;
+                }
+
+                .work-text{
+                    padding: 0 20px;
+                    padding-bottom: 20px;
+                    h4{
+                        font-family: "Exo 2", sans-serif;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: #363738;
+                    }
+                }
+            }
+            .work-box:hover{
+                box-shadow: 1px 1px 10px #FFCE50;
+                cursor: pointer;
+                transform: scale(1.01);
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .work{
+        .work-content{
+            .work-boxs{
+                grid-template-columns: auto;
+                .work-box{
+                    .work-img{
+                        text-align: center;
+                        img{
+                            width: 1000px;
+                            height: 400px;
+                        }
+                    }
+                }
+                .work-box:last-child{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .work{
+        .work-content{
+            h3{
+                font-size: 40px;
+            }
+            .work-boxs{
+                .work-box{
+                    &:nth-child(2){
+                        display: none;
+                    }
+                    .work-img{
+                        img{
+                            height: 200px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

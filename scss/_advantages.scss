@@ -1,0 +1,49 @@
+.advantages{
+    margin: 20px 0;
+    .adv-img{
+        max-width: 100%;
+    }
+
+    .features{
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: auto auto; 
+        gap: 20px;  
+        .feature{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.5rem;
+            .text{
+                margin-left: 40px;
+                h3{
+                    font-family: "Exo 2", sans-serif;
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .advantages{
+        .features{
+            grid-template-columns: auto;
+            gap: 20px;
+            .feature{
+                flex-direction: row;
+            }
+        }
+    }
+}
+
+@media (max-width: 425px) {
+    .advantages{
+        display: none;
+    }
+}
